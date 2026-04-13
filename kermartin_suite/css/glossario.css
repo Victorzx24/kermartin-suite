@@ -1,0 +1,216 @@
+:root {
+    /* Azul Marinho Profundo */
+    --primaria: #1a2a40;
+    /* Dourado Soft */
+    --secundaria: #c5a059;
+    /* Cinza de fundo leve */
+    --fundo: #f2f4f7;
+
+    --branco: #ffffff;
+    --texto: #333333;
+    /* Cinza de borda padrão */
+    --borda: #d1d5db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo);
+    font-family: 'Inter', sans-serif;
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* HEADER - Padronizado com a Index */
+header {
+    background-color: var(--primaria);
+    color: var(--branco);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid var(--secundaria);
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+#titulo_dashboard {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+#subtitulo_dashboard {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--secundaria);
+    font-size: 0.9rem;
+}
+
+.search-box {
+    position: relative;
+    margin: 20px auto 0;
+    max-width: 300px;
+}
+
+#filtro-glossario {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    border: 2px solid var(--secundaria);
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #fdfdfd;
+}
+
+#filtro-glossario:focus {
+    border-color: var(--secundaria);
+    box-shadow: 0 0 8px rgba(197, 160, 89, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secundaria);
+    pointer-events: none;
+}
+
+/* 2. Estilização do Botão Voltar (Nav) */
+main>nav {
+    grid-column: 1 / -1;
+    /* Ocupa a largura toda */
+    margin-bottom: 10px;
+}
+
+main>nav a {
+    text-decoration: none;
+    color: var(--primaria);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid var(--primaria);
+    padding: 8px 25px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+main>nav a:hover {
+    background-color: var(--primaria);
+    color: var(--branco);
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 25px;
+}
+
+/* Container do Glossário */
+.glossario-container {
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.glossario-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--fundo);
+    padding-bottom: 20px;
+}
+
+.glossario-header h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primaria);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.glossario-header p {
+    color: var(--texto-light);
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* Lista de Termos */
+.lista-termos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.termo-item {
+    padding: 15px 20px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    background: #fdfdfd;
+}
+
+/* Efeito de destaque ao passar o mouse */
+.termo-item:hover {
+    background: #f9f9f9;
+    border-left: 3px solid var(--secundaria);
+    transform: translateX(5px);
+}
+
+.termo-item dt {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primaria);
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.termo-item dd {
+    color: var(--texto);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-left: 0; /* Remove o recuo padrão do browser */
+}
+
+/* Estilo para termos em Latim (Opcional: use <em> no HTML) */
+.termo-item dt em {
+    color: var(--secundaria);
+    font-style: italic;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 5rem;
+    padding: 3rem 1rem;
+    background: #f1f1f1;
+    border-top: 1px solid var(--borda);
+    text-align: center;
+}
+
+.footer-container p {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--secundaria);
+    margin: 0 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: var(--branco);
+}

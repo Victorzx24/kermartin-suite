@@ -1,0 +1,147 @@
+:root {
+    /* Azul Marinho Profundo */
+    --primaria: #1a2a40;
+    /* Dourado Soft */
+    --secundaria: #c5a059;
+    /* Cinza de fundo leve */
+    --fundo: #f2f4f7;
+
+    --branco: #ffffff;
+    --texto: #333333;
+    /* Cinza de borda padrão */
+    --borda: #d1d5db;
+}
+
+/* RESET E ESTRUTURA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo);
+    font-family: 'Inter', sans-serif;
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* HEADER E LOGO */
+header {
+    background-color: var(--primaria);
+    color: var(--branco);
+    padding: 2.5rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid var(--secundaria);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+h1#titulo_dashboard {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+p#subtitulo_dashboard {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--secundaria);
+    font-size: 0.9rem;
+}
+
+/* MAIN E SEÇÕES */
+main {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+section {
+    background: var(--branco);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--borda);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+    color: var(--primaria);
+    font-size: 1.8rem;
+}
+
+/* BOTÕES/LINKS */
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--primaria);
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    border: 1px solid transparent;
+}
+
+nav a:hover {
+    background-color: var(--secundaria);
+    color: var(--primaria);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 5rem;
+    padding: 3rem 1rem;
+    background: #f1f1f1;
+    border-top: 1px solid var(--borda);
+    text-align: center;
+}
+
+.footer-container p {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--secundaria);
+    margin: 0 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: var(--branco);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    h1#titulo_dashboard {
+        font-size: 1.8rem;
+    }
+
+    main {
+        margin: 2rem auto;
+    }
+}

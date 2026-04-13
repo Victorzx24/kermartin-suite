@@ -1,0 +1,244 @@
+:root {
+    /* Azul Marinho Profundo */
+    --primaria: #1a2a40;
+    /* Dourado Soft */
+    --secundaria: #c5a059;
+    /* Cinza de fundo leve */
+    --fundo: #f2f4f7;
+    
+    --branco: #ffffff;
+    --texto: #333333;
+    /* Cinza de borda padrão */
+    --borda: #d1d5db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Inter', sans-serif;
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* HEADER - Padronizado com a Index */
+header {
+    background-color: var(--primaria);
+    color: var(--branco);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid var(--secundaria);
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+#titulo_dashboard {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+#subtitulo_dashboard {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--secundaria);
+    font-size: 0.9rem;
+}
+
+
+/* 1. Ajuste do Container Principal */
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Força coluna única para o gerador */
+    gap: 20px;
+    max-width: 1000px; /* Largura ideal para leitura e escrita */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* 2. Estilização do Botão Voltar (Nav) */
+main>nav {
+    grid-column: 1 / -1;
+    /* Ocupa a largura toda */
+    margin-bottom: 10px;
+}
+
+main>nav a {
+    text-decoration: none;
+    color: var(--primaria);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid var(--primaria);
+    padding: 8px 25px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+main>nav a:hover {
+    background-color: var(--primaria);
+    color: var(--branco);
+}
+
+/* 3. A Seção do Gerador (Card Principal) */
+.prompt-generator {
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-top: 6px solid #1a2a40; /* Destaque superior Marinho */
+}
+
+.prompt-generator h2 {
+    color: #1a2a40;
+    font-family: 'Playfair Display', serif; /* Se estiver usando, senão sans-serif */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.prompt-generator p {
+    color: #636e72;
+    margin-bottom: 20px;
+}
+
+/* 4. Campos de Formulário */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    color: #1a2a40;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#prompt_objetivo, #prompt_texto {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fcfcfc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#prompt_texto {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#prompt_objetivo:focus, #prompt_texto:focus {
+    outline: none;
+    border-color: #c5a059;
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+}
+
+/* 5. Botões de Ação */
+.btn-acao {
+    width: 100%;
+    background-color: var(--primaria);
+    color: #ffffff;
+    padding: 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background 0.3s;
+}
+
+.btn-acao:hover {
+    background-color: #2c3e50;
+}
+
+/* 6. Container de Resultado (Onde aparece o Prompt Final) */
+#resultado_prompt_container {
+    border-top: 2px solid #eee;
+    padding-top: 30px;
+}
+
+#resultado_prompt_container h3 {
+    color: #c5a059;
+    margin-bottom: 15px;
+}
+
+#prompt_final {
+    width: 100%;
+    padding: 20px;
+    background-color: #2d3436 !important; /* Fundo escuro para destacar o texto gerado */
+    color: #dfe6e9 !important;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.btn-copy {
+    width: 100%;
+    background-color: #c5a059;
+    color: var(--primaria);
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.btn-copy:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 5rem;
+    padding: 3rem 1rem;
+    background: #f1f1f1;
+    border-top: 1px solid var(--borda);
+    text-align: center;
+}
+
+.footer-container p {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--secundaria);
+    margin: 0 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: var(--branco);
+}
+
+
+/* 7. Responsividade */
+@media (max-width: 768px) {
+    .prompt-generator {
+        padding: 20px;
+    }
+    
+    .prompt-generator h2 {
+        font-size: 1.4rem;
+    }
+}

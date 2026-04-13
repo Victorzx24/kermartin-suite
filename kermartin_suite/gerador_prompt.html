@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Prompts</title>
+    <link rel="stylesheet" href="css/gerador_prompt.css"> <!--CSS ESPECÍFICO-->
+    <link rel="icon" href="./icones/Escudo_de_Lady_Justice_em_vetor-removebg-preview.png" type="image/png">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="./icones/Escudo_de_Lady_Justice_em_vetor-removebg-preview.png" alt="Escudo Lady Justice"
+                class="logo">
+
+            <div class="header-text">
+                <h1 id="titulo_dashboard">Kermartin Suite</h1>
+                <p id="subtitulo_dashboard">Suite Jurídico - Gerador de Prompt</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav><a href="index.html" title="Voltar">Voltar</a></nav>
+
+        <section class="prompt-generator">
+            <h2>Gerador de Prompt Jurídico - Revisor Gramátical</h2>
+            <p>Preencha os campos abaixo para gerar um comando profissional para a IA.</p><br>
+
+            <div class="form-group">
+                <label><strong>Objetivo do Texto:</strong></label>
+                <input type="text" id="prompt_objetivo" placeholder="Ex: Contestação em Ação de Cobrança">
+
+                <label><strong>Texto Principal:</strong></label>
+                <textarea id="prompt_texto" rows="4" placeholder="Escreva o texto para ser redigido..."></textarea>
+            </div>
+
+            <button class="btn-acao" onclick="gerarPrompt()">GERAR PROMPT ESTRUTURADO</button>
+
+            <div id="resultado_prompt_container" style="display:none; margin-top: 20px;">
+                <h3>Prompt Gerado:</h3>
+                <textarea id="prompt_final" readonly rows="8"
+                    style="background: #f1f1f1; font-family: monospace;"></textarea>
+                <button class="btn-copy" onclick="copiarPrompt()">COPIAR PARA O GEMINI</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>© 2026 <strong>Victorzx24</strong> Kermartin Suite - Inteligência e Produtividade Jurídica.</p>
+            <nav class="footer-links">
+                <a href="./institucional/contato.html">Contato</a>
+                <a href="./institucional/privacidade.html">Privacidade</a>
+                <a href="./institucional/sobre.html">Sobre</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script_js/gerador_prompts.js"></script>
+</body>
+
+</html>

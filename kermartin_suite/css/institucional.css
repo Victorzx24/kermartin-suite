@@ -1,0 +1,171 @@
+:root {
+    --primaria: #1a2a40;
+    --secundaria: #c5a059;
+    --fundo: #f2f4f7;
+    --branco: #ffffff;
+    --texto: #333333;
+    --texto-light: #636e72;
+    --borda: #d1d5db;
+}
+
+/* Reset e Estrutura base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Necessário para o rodapé ficar embaixo */
+}
+
+body {
+    background-color: var(--fundo);
+    font-family: 'Inter', sans-serif;
+    color: var(--texto);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+/* HEADER - Identidade Visual */
+header {
+    background-color: var(--primaria);
+    color: var(--branco);
+    padding: 2.5rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid var(--secundaria);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+#titulo_dashboard {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+#subtitulo_dashboard {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--secundaria);
+    font-size: 0.85rem;
+}
+
+/* MAIN - Estilização do Conteúdo */
+main {
+    flex: 1; /* Faz o main esticar para empurrar o footer */
+    width: 100%;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.institucional-card {
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.institucional-card h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primaria);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--fundo);
+}
+
+.institucional-card article p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: justify;
+    color: var(--texto);
+}
+
+/* Estilização da Citação Histórica */
+.legado-historico {
+    margin-top: 35px;
+    padding: 20px 30px;
+    background-color: #fcf9f2; /* Um creme bem suave, quase branco */
+    border-left: 4px solid var(--secundaria); /* A borda dourada */
+    border-radius: 0 4px 4px 0;
+    position: relative;
+}
+
+.legado-historico header {
+    background: none;
+    border: none;
+    color: var(--secundaria);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.legado-historico p {
+    font-size: 0.95rem !important;
+    font-style: italic;
+    color: var(--texto-light);
+    line-height: 1.5;
+    margin-bottom: 0 !important;
+}
+
+/* Pequeno detalhe decorativo opcional */
+.legado-historico::after {
+    content: "⚖";
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: rgba(197, 160, 89, 0.2); /* Dourado bem transparente */
+}
+
+/* FOOTER - Sóbrio e Elegante */
+footer {
+    background-color: #f8f9fa;
+    padding: 3rem 1rem;
+    border-top: 1px solid var(--borda);
+    text-align: center;
+}
+
+.footer-container p {
+    font-size: 0.85rem;
+    color: var(--texto-light);
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--primaria);
+    margin: 0 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+    color: var(--secundaria);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #titulo_dashboard { font-size: 1.8rem; }
+    .institucional-card { padding: 25px; }
+    .institucional-card article p { text-align: left; }
+}

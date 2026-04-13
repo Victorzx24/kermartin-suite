@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kermartin Suite - Ferramentas</title>
+    <link rel="stylesheet" href="css/ferramentas.css"> <!--Específico-->
+    <link rel="icon" href="./icones/Escudo_de_Lady_Justice_em_vetor-removebg-preview.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="./icones/Escudo_de_Lady_Justice_em_vetor-removebg-preview.png" alt="Escudo Lady Justice"
+                class="logo">
+
+            <div class="header-text">
+                <h1 id="titulo_dashboard">Kermartin Suite</h1>
+                <p id="subtitulo_dashboard">Suite Jurídico - Ferramentas</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav><a href="index.html" title="Voltar">Voltar</a></nav>
+
+        <section> <!--Seção de cálculo de porcentagem-->
+            <h2>Cálculo de Porcentagens</h2>
+
+            <form>
+                <p>
+                    <input id="valor_porcentagem" placeholder="Quantos %:">
+                </p>
+
+                <p>
+                    <input id="valor_em_real" step="0.01" placeholder="De (valor em R$):">
+                </p>
+
+                <p>
+                    <input type="submit" value="Calcular" step="0.01" required>
+                <div id="resultado_porcentagem"></div>
+                </p>
+            </form>
+
+        </section>
+
+        <section> <!--Seção da ferramenta número por extenso-->
+            <h2>Número por extenso</h2>
+
+            <form>
+                <p>
+                    <input id="num_extenso" inputmode="numeric" placeholder="R$:" autocomplete="off">
+                </p>
+                <div id="resultado_extenso_minusculas"></div>
+            </form>
+
+        </section>
+
+        <section> <!--Seção da calculadora-->
+
+            <input type="text" id="display" class="display" readonly>
+
+            <div class="grid">
+                <button class="btn" onclick="clearDisplay()">C</button>
+                <button class="btn" onclick="backspace()">⌫</button>
+                <button class="btn operator" onclick="append('/')">÷</button>
+                <button class="btn operator" onclick="append('*')">×</button>
+
+                <button class="btn" onclick="append('7')">7</button>
+                <button class="btn" onclick="append('8')">8</button>
+                <button class="btn" onclick="append('9')">9</button>
+                <button class="btn operator" onclick="append('-')">−</button>
+
+                <button class="btn" onclick="append('4')">4</button>
+                <button class="btn" onclick="append('5')">5</button>
+                <button class="btn" onclick="append('6')">6</button>
+                <button class="btn operator" onclick="append('+')">+</button>
+
+                <button class="btn" onclick="append('1')">1</button>
+                <button class="btn" onclick="append('2')">2</button>
+                <button class="btn" onclick="append('3')">3</button>
+
+                <button class="btn" onclick="append('0')">0</button>
+                <button class="btn" onclick="append('.')">.</button>
+                <button class="btn equal" onclick="calculate()">=</button>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Comandos da Calculadora</h2>
+            <h3>Operadores</h3>
+
+            <ul>
+                <li>Adição: +</li>
+                <li>Subtração: -</li>
+                <li>Multiplicação: x ou X</li>
+                <li>Divisão: /</li>
+            </ul>
+            <h3>Ações</h3>
+            <ul>
+                <li>Esc: Limpar Tudo </li>
+                <li>Enter ou = : Calcular </li>
+                <li>backspace: Apaga o último caracter</li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2>Calculadora de Prazo</h2>
+            <input type="date" id="data_inicio">
+            <input type="number" id="prazo_dias" placeholder="Prazo (ex: 15)">
+            <button class="btn-acao" 
+            onclick="executarCalculoPrazo()">Calcular Vencimento Útil</button>
+            <div id="resultado_prazo"></div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <p>© 2026 <strong>Victorzx24</strong> Kermartin Suite - Inteligência e Produtividade Jurídica.</p>
+            <nav class="footer-links">
+                <a href="./institucional/contato.html">Contato</a>
+                <a href="./institucional/privacidade.html">Privacidade</a>
+                <a href="./institucional/sobre.html">Sobre</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="./script_js/numero_por_extenso.js"></script>
+    <script src="https://unpkg.com/extenso/dist/extenso.min.js"></script>
+    <!--Biblioteca para converter os números e extenso-->
+    <script src="./script_js/calculo_porcentagem.js"></script>
+    <script src="./script_js/calculadora.js"></script>
+    <script src="./script_js/calculo_datas.js"></script>
+
+</body>
+
+</html>
