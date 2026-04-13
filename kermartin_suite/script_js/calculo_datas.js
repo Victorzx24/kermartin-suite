@@ -1,7 +1,3 @@
-/**
- * KERMARTIN SUITE - Módulo de Prazos
- */
-
 // 1. Diferença entre duas datas (Dias Corridos)
 function calcularDiferenca(dataInicial, dataFinal) {
     const d1 = new Date(dataInicial);
@@ -49,7 +45,7 @@ function executarCalculoPrazo() {
         // Chama a função de somar dias (que criamos antes)
         const dataFinal = somarDias(dataInicio, diasPrazo, true);
 
-        // O resultado já sai em PT-BR porque usamos .toLocaleDateString('pt-BR') na função somarDias
-        display.innerHTML = `Vencimento: <strong>${dataFinal}</strong>`;
+        // O resultado já sai em PT-BR: .toLocaleDateString('pt-BR')
+        display.innerText = `Vencimento: ${dataFinal}`;
     }
 }

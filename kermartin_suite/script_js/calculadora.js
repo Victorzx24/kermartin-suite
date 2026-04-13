@@ -36,15 +36,22 @@ function backspace() {
 // Calcula a expressão
 function calculate() {
     try {
-        if (display.value.trim() === "") return;
+        const input = display.value.trim();
+        if (input === "") return;
 
-        // Evita eval quebrado
-        const result = eval(display.value);                 // "eval()" permite executar uma string como código
+        // Remove TUDO que não for: números, operadores (+-*/.), parênteses ou espaços.
+        const sanitizedInput = input.replace(/[^-()\d/*+.]/g, '');
 
-        if (result === Infinity || isNaN(result)) {         // Soluciona casos de erro
+        // SUBSTITUIÇÃO DO EVAL: Usando o construtor Function
+
+        const result = new Function(`"use strict"; return (${sanitizedInput})`)();
+
+        //  VALIDAÇÃO DE RESULTADO
+        if (result === Infinity || isNaN(result)) {
             display.value = "Erro";
         } else {
-            display.value = result;
+            // Arredonda para evitar problemas de precisão flutuante (ex: 0.1 + 0.2)
+            display.value = Number(result.toFixed(10)); 
         }
     } catch {
         display.value = "Erro";
