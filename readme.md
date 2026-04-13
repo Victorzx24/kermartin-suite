@@ -68,7 +68,7 @@ O Kermartin é um hub em constante evolução. Nosso objetivo é acompanhar as m
 
 ## Versão Atual
 
-1.6.0 (Release consolidada com Hub de ferramentas completo).
+1.6.1 (Release consolidada com Hub de ferramentas completo).
 
 ## Nome do Autor:
 Victor Augusto Dórea
