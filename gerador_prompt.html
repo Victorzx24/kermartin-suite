@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self';">
     <title>Gerador de Prompts</title>
     <link rel="stylesheet" href="assets/css/gerador_prompt.css"> <!--CSS ESPECÍFICO-->
     <link rel="icon" href="assets/icones/icon_logo.png" type="image/png">
@@ -13,8 +15,7 @@
 
     <header>
         <div class="header-container">
-            <img src="assets/icones/icon_logo.png" alt="Escudo Lady Justice"
-                class="logo">
+            <img src="assets/icones/icon_logo.png" alt="Escudo Lady Justice" class="logo">
 
             <div class="header-text">
                 <h1 id="titulo_dashboard">Kermartin Suite</h1>
@@ -40,10 +41,9 @@
 
             <button class="btn-acao" onclick="gerarPrompt()">GERAR PROMPT ESTRUTURADO</button>
 
-            <div id="resultado_prompt_container" style="display:none; margin-top: 20px;">
+            <div id="resultado_prompt_container">
                 <h3>Prompt Gerado:</h3>
-                <textarea id="prompt_final" readonly rows="8"
-                    style="background: #f1f1f1; font-family: monospace;"></textarea>
+                <textarea id="prompt_final" readonly rows="8"></textarea>
                 <button class="btn-copy" onclick="copiarPrompt()">COPIAR PARA O GEMINI</button>
             </div>
         </section>
