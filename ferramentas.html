@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://brasilapi.com.br;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kermartin Suite - Ferramentas</title>
     <link rel="stylesheet" href="assets/css/ferramentas.css"> <!--Específico-->
     <link rel="icon" href="assets/icones/icon_logo.png" type="image/png">
@@ -12,8 +14,7 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="assets/icones/icon_logo.png" alt="Escudo Lady Justice"
-                class="logo">
+            <img src="assets/icones/icon_logo.png" alt="Escudo Lady Justice" class="logo">
 
             <div class="header-text">
                 <h1 id="titulo_dashboard">Kermartin Suite</h1>
@@ -111,13 +112,12 @@
             <h2>Calculadora de Prazo</h2>
             <input type="date" id="data_inicio">
             <input type="number" id="prazo_dias" placeholder="Prazo (ex: 15)">
-            <button class="btn-acao" 
-            onclick="executarCalculoPrazo()">Calcular Vencimento Útil</button>
+            <button class="btn-acao" onclick="executarCalculoPrazo()">Calcular Vencimento Útil</button>
             <div id="resultado_prazo"></div>
         </section>
 
     </main>
-    
+
     <footer>
         <div class="footer-container">
             <p>© 2026 <strong>Victorzx24</strong> Kermartin Suite - Inteligência e Produtividade Jurídica.</p>
@@ -129,13 +129,23 @@
         </div>
     </footer>
 
-    
+
     <script src="assets/js/vendor/extenso.js"></script>
     <!--Biblioteca para converter os números e extenso-->
     <script src="assets/js/calculo_porcentagem.js"></script>
     <script src="assets/js/numero_por_extenso.js"></script>
     <script src="assets/js/calculadora.js"></script>
     <script src="assets/js/calculo_datas.js"></script>
+
+    <script src="assets/js/brasil_api.js"></script>
+    <script src="assets/js/prazo_legal.js"></script>
+
+    <script src="assets/js/testes_integracao.js"></script>
+
+    <script>
+        console.log("Iniciando testes diretamente no fim do arquivo...");
+        rodarTesteIntegracaoAPI();
+    </script>
 
 </body>
 

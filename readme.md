@@ -51,7 +51,7 @@ O Kermartin é um hub em constante evolução. Nosso objetivo é acompanhar as m
     JavaScript para processamento de cálculos em tempo real no lado do cliente (Client-side).
 
 
-## Instruções de Instalação
+## Instruções de Instalação (Local)
 
 ### Clonar o Repositório:
     git clone https://github.com/Victorzx24/kermartin-suite.git
@@ -68,15 +68,10 @@ O Kermartin é um hub em constante evolução. Nosso objetivo é acompanhar as m
 
 ## Versão Atual
 
-1.6.2 (Release consolidada com Hub de ferramentas completo).
+1.7.0 (Release consolidada com Hub de ferramentas completo).
 
-## Nome do Autor:
-Victor Augusto Dórea
 
-## ⚖️ Licença e Direitos Autorais
 
-Este projeto é de propriedade intelectual de **Victor Augusto Dórea**. 
-O código-fonte e a identidade visual estão protegidos sob leis de direitos autorais. 
-Atualmente, não é permitida a redistribuição, sublicenciamento ou venda de qualquer parte deste software.
+## Desenvolvido por
 
-Copyright (c) 2026 Kermartin Suite - Todos os direitos reservados.
+**Victorzx24** | 2026

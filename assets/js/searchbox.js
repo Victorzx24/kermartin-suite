@@ -30,5 +30,7 @@ function pesquisarGlossario() {
 
     // 4. Mostra mensagem de erro se nada for encontrado
     let msgErro = document.getElementById("no-results");
-    msgErro.style.display = encontrouAlgo ? "none" : "block";
+    if (msgErro) {
+        msgErro.style.display = encontrouAlgo ? "none" : "block";
+    }
 }

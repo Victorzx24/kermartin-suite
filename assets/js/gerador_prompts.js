@@ -67,15 +67,26 @@ function copiarPrompt() {
     const texto_redigido = document.getElementById('prompt_final');
     texto_redigido.select();
     document.execCommand('copy'); // Copia para o clipboard
-    
+
     // Feedback visual
     const btn = document.querySelector('.btn-copy');
     const originalText = btn.innerText;
     btn.innerText = "COPIADO!";
     btn.style.backgroundColor = "#27ae60";
-    
+
     setTimeout(() => {
         btn.innerText = originalText;
         btn.style.backgroundColor = ""; // Volta ao padrão do CSS
     }, 2000);
 }
+
+console.log(
+    "%cATENÇÃO!",
+    "color: #d9534f; font-size: 40px; font-weight: bold; font-family: sans-serif;"
+);
+
+console.log(
+    "%cEsta é uma ferramenta de inspeção do navegador destinada a desenvolvedores. %c\n\nNão copie e cole nada neste local. Feche esta aba e continue utilizando a ferramenta normalmente!",
+    "font-size: 15px; color: #d9534f; font-weight: bold; font-family: sans-serif;",
+    "font-size: 15px; color: #777; font-weight: normal; font-family: sans-serif;"
+);

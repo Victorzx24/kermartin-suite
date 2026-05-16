@@ -166,6 +166,8 @@ main>nav a:hover {
 
 /* 6. Container de Resultado (Onde aparece o Prompt Final) */
 #resultado_prompt_container {
+    display: none;
+    margin-top: 20px;
     border-top: 2px solid #eee;
     padding-top: 30px;
 }
@@ -185,6 +187,7 @@ main>nav a:hover {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 15px;
+    font-family: monospace;
 }
 
 .btn-copy {
@@ -242,3 +245,4 @@ footer {
         font-size: 1.4rem;
     }
 }
+
